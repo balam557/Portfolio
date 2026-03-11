@@ -1,130 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Luca | Portfolio</title>
+
 <style>
-    body{
-font-family: Arial, sans-serif;
+
+*{
+box-sizing:border-box;
 margin:0;
-background:#f5f5f5;
-color:#333;
+padding:0;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f6f8;
+color:#333;
+line-height:1.6;
+}
+
+/* HEADER */
 
 header{
-background:#111;
+background:linear-gradient(135deg,#141e30,#243b55);
 color:white;
 text-align:center;
-padding:40px 20px;
+padding:70px 20px;
 }
 
+header img{
+width:120px;
+border-radius:50%;
+margin-bottom:15px;
+border:4px solid white;
+}
+
+header h1{
+font-size:3rem;
+margin-bottom:10px;
+}
+
+header p{
+font-size:1.2rem;
+opacity:0.9;
+}
+
+.hero-btn{
+display:inline-block;
+margin-top:25px;
+padding:12px 22px;
+background:#00aaff;
+color:white;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.hero-btn:hover{
+background:#008ecc;
+transform:scale(1.05);
+}
+
+/* NAVBAR */
+
 nav{
-text-align:center;
-background:#222;
-padding:10px;
+background:#111;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+padding:15px;
 }
 
 nav a{
 color:white;
-margin:0 15px;
 text-decoration:none;
 font-weight:bold;
+padding:8px 14px;
+border-radius:6px;
+transition:0.3s;
 }
 
+nav a:hover{
+background:#00aaff;
+}
+
+/* SECTIONS */
+
 section{
-max-width:900px;
+max-width:1000px;
 margin:auto;
-padding:40px 20px;
+padding:60px 20px;
 }
 
 h2{
-border-bottom:2px solid #ddd;
-padding-bottom:10px;
+margin-bottom:25px;
+border-bottom:3px solid #00aaff;
+display:inline-block;
+padding-bottom:6px;
 }
+
+/* CARDS */
 
 .card{
 background:white;
-padding:20px;
+padding:25px;
 margin-top:20px;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+.card img{
+width:100%;
 border-radius:8px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
+margin-bottom:15px;
 }
 
 .card a{
-color:#0066cc;
+display:inline-block;
+margin-top:10px;
+padding:8px 14px;
+background:#00aaff;
+color:white;
+border-radius:5px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.card a:hover{
+background:#008ecc;
+}
+
+/* SKILLS */
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+gap:15px;
+margin-top:20px;
+}
+
+.skill{
+background:white;
+padding:15px;
+border-radius:8px;
+text-align:center;
+font-weight:bold;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* LIST */
+
+ul{
+padding-left:20px;
+}
+
+li{
+margin-bottom:10px;
+}
+
+/* CONTACT */
+
+.contact a{
+color:#00aaff;
 text-decoration:none;
 }
 
+.contact a:hover{
+text-decoration:underline;
+}
+
+/* FOOTER */
+
 footer{
 text-align:center;
-padding:20px;
+padding:25px;
 background:#111;
 color:white;
 margin-top:40px;
 }
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+header h1{
+font-size:2.2rem;
+}
+
+nav{
+gap:12px;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
 <header>
+
+<img src="profile.jpg" alt="Profile Photo">
+
 <h1>Luca</h1>
+
 <p>Student | Creator | Future College Student</p>
+
+<a class="hero-btn" href="#projects">View My Work</a>
+
 </header>
 
 <nav>
 <a href="#about">About</a>
 <a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
 <a href="#activities">Activities</a>
 <a href="#contact">Contact</a>
 </nav>
 
 <section id="about">
+
 <h2>About Me</h2>
+
 <p>
-Hi! I'm Luca. I' ma student interested in technology, creativity, and learning new things.
-This website showcases my projects, activities, and achievements as I prepare to apply for college.
+Hi! I'm Luca. I'm a student interested in technology, creativity, and building cool things.
+This website showcases my projects, activities, and achievements as I prepare for college
+and continue learning programming and development.
 </p>
+
 </section>
 
 <section id="projects">
+
 <h2>Projects</h2>
 
 <div class="card">
+
+<img src="project1.jpg" alt="Project Image">
+
 <h3>Project Title</h3>
-<p>Description of your project.</p>
+
+<p>
+Describe what the project does, what tools you used, and what you learned while building it.
+</p>
+
 <a href="#">View Project</a>
+
 </div>
 
 <div class="card">
+
+<img src="project2.jpg" alt="Project Image">
+
 <h3>Another Project</h3>
-<p>Explain what you built and what you learned.</p>
+
+<p>
+Explain what problem your project solves and how you built it.
+</p>
+
 <a href="#">View Project</a>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Python</div>
+<div class="skill">Git</div>
+<div class="skill">Problem Solving</div>
+
 </div>
 
 </section>
 
 <section id="activities">
+
 <h2>Activities & Achievements</h2>
 
 <ul>
-<li>Clubs</li>
-<li>Competitions</li>
-<li>Volunteering</li>
-<li>Awards</li>
+<li>Member of school technology club</li>
+<li>Participated in coding competitions</li>
+<li>Volunteer work in community events</li>
+<li>Academic or extracurricular awards</li>
 </ul>
 
 </section>
 
 <section id="contact">
+
 <h2>Contact</h2>
-<p>Email: your@email.com</p>
-<p>GitHub: github.com/yourusername</p>
+
+<div class="contact">
+
+<p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
+
+<p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+
+</div>
+
 </section>
 
 <footer>
+
 <p>© 2026 Luca</p>
+
 </footer>
 
 </body>
