@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Color Generator</title>
+
+<style>
+
+body{
+font-family:sans-serif;
+text-align:center;
+padding:50px;
+background:#111;
+color:white;
+}
+
+button{
+padding:15px 25px;
+font-size:16px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Random Color Generator</h1>
+
+<button onclick="generate()">Generate Color</button>
+
+<h2 id="code"></h2>
+
+<script>
+
+function generate(){
+
+let color="#"+Math.floor(Math.random()*16777215).toString(16)
+
+document.body.style.background=color
+
+document.getElementById("code").innerText=color
+
+}
+
+</script>
+
+</body>
+</html>
